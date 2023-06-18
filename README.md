@@ -8,3 +8,4 @@
 - [x] HTML
 - [x] CSS
 - [x] JSS
+- [x] Python API
