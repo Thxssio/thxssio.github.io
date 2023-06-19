@@ -7,5 +7,5 @@
 
 - [x] HTML
 - [x] CSS
-- [x] JSS
+- [x] JS
 - [x] Python API
