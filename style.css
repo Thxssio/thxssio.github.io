@@ -98,7 +98,7 @@ nav .menu-btn,
   display: none;
 }
 nav .menu-btn{
-  color: #000000;
+  color: #ffffff;
 }
 nav.sticky .menu-btn{
   color: #FFF;
@@ -112,7 +112,7 @@ nav.sticky .menu-btn{
   width: 100%;
   background: url("images/Home.svg") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
