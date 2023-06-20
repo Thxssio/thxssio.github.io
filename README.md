@@ -7,6 +7,7 @@
 
 [![thxssio website](https://github.com/Thxssio/thxssio.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/Thxssio/thxssio.github.io/actions/workflows/pages/pages-build-deployment)
 
+[![thxssio website](https://github.com/Thxssio/thxssio.github.io/actions/workflows/thxssio.yml/badge.svg)](https://github.com/Thxssio/thxssio.github.io/actions/workflows/thxssio.yml)
 - [x] HTML
 - [x] CSS
 - [x] JS
