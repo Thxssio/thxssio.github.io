@@ -12,11 +12,10 @@ $images:
   url('images/photos/3.jpg'),
   url('images/photos/4.jpg'),
   url('images/photos/5.jpg'),
-  url('images/photos/6.jpg');
+  url('images/photos/6.png');
 
 .container {
-  position: relative;
-  width: 420px;
+  position: sticky;
   border: #ffffff solid 2px;
   border-radius: 4px;
   height: 420px;
