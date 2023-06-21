@@ -1,8 +1,7 @@
 /* Google Font CDN Link */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 .container {
-  position: relative;
-  width: 420px;
+  position: sticky;
   border: #ffffff solid 2px;
   border-radius: 4px;
   height: 420px;
@@ -264,7 +263,7 @@
     transform: rotateY(0deg);
   }
   90% {
-    background-image: url("images/photos/6.jpg");
+    background-image: url("images/photos/6.png");
     background-position: -210px -2px;
     transform: rotateY(180deg);
   }
@@ -316,7 +315,7 @@
     transform: rotateY(0deg);
   }
   90.5% {
-    background-image: url("images/photos/6.jpg");
+    background-image: url("images/photos/6.png");
     background-position: -238px -2px;
     transform: rotateY(180deg);
   }
@@ -368,7 +367,7 @@
     transform: rotateY(0deg);
   }
   91% {
-    background-image: url("images/photos/6.jpg");
+    background-image: url("images/photos/6.png");
     background-position: -268px -2px;
     transform: rotateY(180deg);
   }
@@ -420,7 +419,7 @@
     transform: rotateY(0deg);
   }
   91.5% {
-    background-image: url("images/photos/6.jpg");
+    background-image: url("images/photos/6.png");
     background-position: -298px -2px;
     transform: rotateY(180deg);
   }
@@ -472,7 +471,7 @@
     transform: rotateY(0deg);
   }
   92% {
-    background-image: url("images/photos/6.jpg");
+    background-image: url("images/photos/6.png");
     background-position: -328px -2px;
     transform: rotateY(180deg);
   }
@@ -524,7 +523,7 @@
     transform: rotateY(0deg);
   }
   92.5% {
-    background-image: url("images/photos/6.jpg");
+    background-image: url("images/photos/6.png");
     background-position: -358px -2px;
     transform: rotateY(180deg);
   }
@@ -576,7 +575,7 @@
     transform: rotateY(0deg);
   }
   93% {
-    background-image: url("images/photos/6.jpg");
+    background-image: url("images/photos/6.png");
     background-position: -388px -2px;
     transform: rotateY(180deg);
   }
