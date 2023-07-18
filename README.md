@@ -3,7 +3,7 @@
 
 
 
-***Acesse [thassio.xyz](http://thassio.xyz/) para mais informações.***
+***Acesse [thxssio.com](http://thassio.xyz/) para mais informações.***
 
 [![thxssio website](https://github.com/Thxssio/thxssio.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/Thxssio/thxssio.github.io/actions/workflows/pages/pages-build-deployment)
 
