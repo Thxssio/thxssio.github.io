@@ -369,8 +369,8 @@ body::selection {
   .background-circle {
     background: #28292d;
     border-radius: 50%;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     box-shadow: 0 0 20px #00000080;
     margin-top: 30px;
   }
@@ -378,27 +378,30 @@ body::selection {
   .hoodie-guy {
     position: absolute;
     background: url(assets/Hoodie-guy.png);
-    top: 50px;
-    height: 300px;
-    width: 300px;
+    top: 20px;
+    height: 280px;
+    width: 250px;
     background-size: cover;
   }
   
   .circle {
     position: relative;
-    top: 200px;
-    left: 90px;
-    width: 70px;
-    height: 70px;
+    top: 180px;
+    left: 150px;
+    width: 0px;
+    height: 0px;
+    transform-style: preserve-3d;
     animation: animateCircle 40s linear infinite;
   }
   
   @keyframes animateCircle {
     0% {
-      transform: perspective(500px) rotateY(0deg) rotateX(15deg) translateY(-15px);
+      transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
+        translateY(-30px);
     }
     100% {
-      transform: perspective(500px) rotateY(360deg) rotateX(15deg) translateY(-15px);
+      transform: perspective(1000px) rotateY(360deg) rotateX(15deg)
+        translateY(-30px);
     }
   }
   
@@ -1207,11 +1210,7 @@ body::selection {
     
 }
   
-  .footer-left h2 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  
+
   .footer-left h2 a {
     color: #5271FF;
     text-underline-offset: 8px;
@@ -1248,6 +1247,11 @@ body::selection {
     padding: 20px;
   
 }
+  .footer-left h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
 
 }
   
@@ -1260,7 +1264,7 @@ body::selection {
     margin-top:300px;
     margin-botton:auto;
     margin-right: 300px;
-    margin-left:-350px
+    margin-left:-270px
   }
     .footer-right a {
     text-align: center;
@@ -1277,6 +1281,11 @@ body::selection {
     padding: 20px;
   
 }
+  .footer-left h2 {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
 
   }
 
