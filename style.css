@@ -1240,6 +1240,14 @@ body::selection {
     text-decoration: none;
     font-size: 20px;
   }
+  .social-icons{
+    justify-content: center;
+    margin-top: 20px;
+    margin-left:  400px;
+    margin-right: auto;
+    padding: 20px;
+  
+}
 
 }
   
@@ -1260,6 +1268,15 @@ body::selection {
     text-decoration: none;
     font-size: 20px;
   }
+
+  .social-icons{
+    justify-content: center;
+    margin-top: 20px;
+    margin-left:  auto;
+    margin-right: auto;
+    padding: 20px;
+  
+}
 
   }
 
@@ -1303,14 +1320,7 @@ body::selection {
     font-weight: 900;
   }
   
-.social-icons{
-    justify-content: center;
-    margin-top: 20px;
-    margin-left:  auto;
-    margin-right: auto;
-    padding: 20px;
-  
-}
+
 
 .social-icons a {
     text-decoration: none;
