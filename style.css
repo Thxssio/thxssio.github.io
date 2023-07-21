@@ -1267,6 +1267,33 @@ body::selection {
 }
 
 @media (min-width: 768px) {
+
+  .githubpageCube{
+    margin-left: 20rem;
+    margin-right: 20rem;
+    border-radius: 25px;
+    background: #0C1014;
+    
+    
+    }
+    .github{
+      height: 900px;
+      width: 100%;
+      background-image: 
+      url("http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thxssio&theme=gotham"),
+      url("https://github-readme-streak-stats.herokuapp.com/?user=thxssio&hide_border=true&card_width=338&theme=gotham"),
+      url("http://github-profile-summary-cards.vercel.app/api/cards/stats?username=thxssio&theme=gotham"),
+      url("https://github-readme-stats.vercel.app/api/top-langs/?username=thxssio&langs_count=10&exclude_repo=&hide=jupyter%20notebook,vim%20script,cmake,makefile,batchfile,emacs%20lisp,css,html&card_width=699&hide_border=true&theme=gotham");
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-position: top, 85% 30%, 10% 30%, bottom; 
+    
+    }
+    .githubpage{
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color:#25262a;
+    }
+    
   .footer-final {
     display: flex;
     justify-content: center;
@@ -1311,47 +1338,8 @@ body::selection {
 
 }
 
-@media  (min-width: 1200px){
-  .githubpageCube{
-    margin-left: 20rem;
-    margin-right: 20rem;
-    border-radius: 25px;
-    background: #0C1014;
-    
-    
-    }
-    .github{
-      height: 900px;
-      width: 100%;
-      background-image: 
-      url("http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=thxssio&theme=gotham"),
-      url("https://github-readme-streak-stats.herokuapp.com/?user=thxssio&hide_border=true&card_width=338&theme=gotham"),
-      url("http://github-profile-summary-cards.vercel.app/api/cards/stats?username=thxssio&theme=gotham"),
-      url("https://github-readme-stats.vercel.app/api/top-langs/?username=thxssio&langs_count=10&exclude_repo=&hide=jupyter%20notebook,vim%20script,cmake,makefile,batchfile,emacs%20lisp,css,html&card_width=699&hide_border=true&theme=gotham");
-      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-      background-position: top, 85% 30%, 10% 30%, bottom; 
-    
-    }
-    .githubpage{
-      padding-top: 50px;
-      padding-bottom: 50px;
-      background-color:#25262a;
-    }
-}
-  .footer-final {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #25262a;
-  }
   
-  #footer {
-    display: flex;
-    flex-direction: row;
-    background-color: #25262a;
-  }
-  
-}
+
 
 @media (max-width: 768px) {
 
