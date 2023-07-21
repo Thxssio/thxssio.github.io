@@ -401,13 +401,14 @@ body::selection {
     margin-top: 30px;
   }
 
-  .hoodie-guy {
+.hoodie-guy {
     position: absolute;
     background: url(assets/Hoodie-guy.png);
     top: 20px;
-    height: 280px;
-    width: 250px;
+    height: 310px;
+    width: 300px;
     background-size: cover;
+    border-radius: 50%;
   }
 
   .circle {
@@ -946,6 +947,7 @@ body::selection {
     height: 550px;
     width: 550px;
     background-size: cover;
+    border-radius: 50%;
   }
 
   .circle {
