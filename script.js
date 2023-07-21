@@ -42,3 +42,4 @@ single_profile_card.forEach((btn, index) => {
         });
     });
 });
+
