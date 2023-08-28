@@ -11,4 +11,4 @@
 - [x] HTML
 - [x] CSS
 - [x] JS
-- [x] Python API
+
