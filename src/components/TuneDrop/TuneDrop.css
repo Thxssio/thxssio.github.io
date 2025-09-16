@@ -1,0 +1,214 @@
+.tunedrop {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  background-image: var(--section-background-color);
+  color: #f4f7fb;
+  position: relative;
+  overflow: hidden;
+}
+
+.tunedrop__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 170px);
+  position: relative;
+  z-index: 2;
+}
+
+.tunedrop__main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tunedrop-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  background: rgba(8, 32, 39, 0.85);
+  border: 1px solid rgba(0, 191, 99, 0.25);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  animation: tunedrop-card-in 720ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.tunedrop-card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  animation: tunedrop-icon-float 4200ms ease-in-out infinite;
+}
+
+.tunedrop-card__icon svg {
+  color: var(--imp-text-color);
+}
+
+.tunedrop-card__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.tunedrop-card__subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  color: rgba(240, 249, 255, 0.8);
+}
+
+.tunedrop-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tunedrop-form__field {
+  position: relative;
+}
+
+.tunedrop-form__icon {
+  position: absolute;
+  inset: 0;
+  left: 0.85rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: rgba(226, 232, 240, 0.5);
+}
+
+.tunedrop-form__clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  color: rgba(226, 232, 240, 0.6);
+  transition: color 200ms ease;
+}
+
+.tunedrop-form__clear:hover {
+  color: rgba(248, 250, 252, 0.9);
+}
+
+.tunedrop-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  padding: 0.85rem 3rem 0.85rem 2.75rem;
+  font-size: 0.95rem;
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+  background-color: rgba(12, 44, 52, 0.9);
+  color: #f8fafc;
+  border-color: rgba(0, 191, 99, 0.15);
+}
+
+.tunedrop-input::placeholder {
+  color: rgba(226, 232, 240, 0.55);
+}
+
+.tunedrop-input:focus {
+  outline: none;
+  border-color: rgba(0, 191, 99, 0.65);
+  box-shadow: 0 0 0 3px rgba(0, 191, 99, 0.18);
+}
+
+.tunedrop-submit {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 200ms ease, background 200ms ease;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00bf63, #19e27c);
+  box-shadow: 0 18px 32px rgba(0, 191, 99, 0.28);
+}
+
+.tunedrop-submit:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px rgba(0, 191, 99, 0.32);
+}
+
+.tunedrop-submit.disabled {
+  background: rgba(148, 163, 184, 0.35);
+  cursor: not-allowed;
+  color: rgba(226, 232, 240, 0.7);
+  box-shadow: none;
+}
+
+.tunedrop-status {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.tunedrop-status.success {
+  background-color: rgba(0, 191, 99, 0.16);
+  color: #34d399;
+}
+
+.tunedrop-status.error {
+  background-color: rgba(220, 38, 38, 0.18);
+  color: #fca5a5;
+}
+
+@keyframes tunedrop-card-in {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tunedrop-icon-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 576px) {
+  .tunedrop {
+    padding-top: 120px;
+  }
+
+  .tunedrop__inner {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .tunedrop-card {
+    padding: 2rem 1.5rem;
+  }
+}
