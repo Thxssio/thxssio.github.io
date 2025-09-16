@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import PublicationCard from "./PublicationCard";
+import { Helmet } from "react-helmet";
 
 function Publications() {
   const gridRef = useRef(null);
@@ -78,31 +79,39 @@ function Publications() {
   ];
 
   return (
-    <Container fluid className="project-section">
-      <Particle />
-      <Container>
-        <h1 className="project-heading">
-          My <strong className="purple">Publications</strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          A selection of academic publications and conference papers.
-        </p>
-        <Row ref={gridRef} style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {pubs.map((p, idx) => (
-            <Col md={6} className="project-card" key={idx}>
-              <PublicationCard
-                title={p.title}
-                authors={p.authors}
-                venue={p.venue}
-                year={p.year}
-              />
-            </Col>
-          ))}
-        </Row>
+    <>
+      <Helmet>
+        <title>Thássio Silva | Publications</title>
+        <meta
+          name="description"
+          content="Academic publications and conference papers on robotics, reinforcement learning, and autonomous systems by Thássio Silva."
+        />
+      </Helmet>
+      <Container fluid className="project-section">
+        <Particle />
+        <Container>
+          <h1 className="project-heading">
+            My <strong className="purple">Publications</strong>
+          </h1>
+          <p style={{ color: "white" }}>
+            A selection of academic publications and conference papers.
+          </p>
+          <Row ref={gridRef} style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            {pubs.map((p, idx) => (
+              <Col md={6} className="project-card" key={idx}>
+                <PublicationCard
+                  title={p.title}
+                  authors={p.authors}
+                  venue={p.venue}
+                  year={p.year}
+                />
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </Container>
-    </Container>
+    </>
   );
 }
 
 export default Publications;
-

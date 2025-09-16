@@ -5,10 +5,19 @@ import techAnimation from "../../Assets/TechnologyIsometricAiRobotBrain.json";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { Helmet } from "react-helmet";
 
 function Home() {
   return (
-    <section>
+    <>
+      <Helmet>
+        <title>Thássio Silva | Home</title>
+        <meta
+          name="description"
+          content="Robotics and software engineer building ML-powered autonomy, embedded systems, and cutting-edge R&D projects."
+        />
+      </Helmet>
+      <section>
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
@@ -43,7 +52,8 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
-    </section>
+      </section>
+    </>
   );
 }
 

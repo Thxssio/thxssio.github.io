@@ -3,6 +3,7 @@ import { Music, Download, Link2, X } from "lucide-react";
 import Particle from "../Particle";
 import { Toaster, toast } from "react-hot-toast";
 import "./TuneDrop.css";
+import { Helmet } from "react-helmet";
 
 function extractVideoId(youtubeUrl) {
   const regex =
@@ -79,77 +80,86 @@ function TuneDrop() {
   };
 
   return (
-    <section className="tunedrop">
-      <Particle />
-      <div className="tunedrop__inner">
-        <main className="tunedrop__main">
-          <div className="tunedrop-card">
-            <div className="tunedrop-card__icon">
-              <Music size={64} />
+    <>
+      <Helmet>
+        <title>Thássio Silva | TuneDrop</title>
+        <meta
+          name="description"
+          content="TuneDrop converts YouTube links into audio downloads instantly, featuring dark/light mode and RapidAPI integration."
+        />
+      </Helmet>
+      <section className="tunedrop">
+        <Particle />
+        <div className="tunedrop__inner">
+          <main className="tunedrop__main">
+            <div className="tunedrop-card">
+              <div className="tunedrop-card__icon">
+                <Music size={64} />
+              </div>
+
+              <h1 className="tunedrop-card__title">TuneDrop</h1>
+              <p className="tunedrop-card__subtitle">
+                Download your favourite YouTube tracks in a click
+              </p>
+
+              <form className="tunedrop-form" onSubmit={handleSubmit}>
+                <div className="tunedrop-form__field">
+                  <span className="tunedrop-form__icon">
+                    <Link2 size={18} />
+                  </span>
+
+                  {url ? (
+                    <button
+                      type="button"
+                      className="tunedrop-form__clear"
+                      onClick={() => setUrl("")}
+                      aria-label="Clear link"
+                    >
+                      <X size={18} />
+                    </button>
+                  ) : null}
+
+                  <input
+                    type="text"
+                    value={url}
+                    onChange={(event) => setUrl(event.target.value)}
+                    placeholder="Paste a YouTube link or video ID"
+                    className="tunedrop-input"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className={`tunedrop-submit${isBusy ? " disabled" : ""}`}
+                  disabled={isBusy}
+                >
+                  <Download size={18} />
+                  <span>{status === "loading" ? "Fetching..." : "Download audio"}</span>
+                </button>
+              </form>
+
+              {status === "success" ? (
+                <div className="tunedrop-status success">
+                  Download kicked off successfully!
+                </div>
+              ) : null}
+
+              {status === "error" ? (
+                <div className="tunedrop-status error">
+                  We could not grab this track. Try another link.
+                </div>
+              ) : null}
             </div>
-
-            <h1 className="tunedrop-card__title">TuneDrop</h1>
-            <p className="tunedrop-card__subtitle">
-              Download your favourite YouTube tracks in a click
-            </p>
-
-            <form className="tunedrop-form" onSubmit={handleSubmit}>
-              <div className="tunedrop-form__field">
-                <span className="tunedrop-form__icon">
-                  <Link2 size={18} />
-                </span>
-
-                {url ? (
-                  <button
-                    type="button"
-                    className="tunedrop-form__clear"
-                    onClick={() => setUrl("")}
-                    aria-label="Clear link"
-                  >
-                    <X size={18} />
-                  </button>
-                ) : null}
-
-                <input
-                  type="text"
-                  value={url}
-                  onChange={(event) => setUrl(event.target.value)}
-                  placeholder="Paste a YouTube link or video ID"
-                  className="tunedrop-input"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className={`tunedrop-submit${isBusy ? " disabled" : ""}`}
-                disabled={isBusy}
-              >
-                <Download size={18} />
-                <span>{status === "loading" ? "Fetching..." : "Download audio"}</span>
-              </button>
-            </form>
-
-            {status === "success" ? (
-              <div className="tunedrop-status success">
-                Download kicked off successfully!
-              </div>
-            ) : null}
-
-            {status === "error" ? (
-              <div className="tunedrop-status error">
-                We could not grab this track. Try another link.
-              </div>
-            ) : null}
-          </div>
-        </main>
-      </div>
-      <Toaster
-        position="bottom-center"
-        toastOptions={{
-          style: toastTheme,
-        }}
-      />
-    </section>
+          </main>
+        </div>
+        <Toaster
+          position="bottom-center"
+          toastOptions={{
+            style: toastTheme,
+          }}
+        />
+      </section>
+    </>
   );
 }
 
