@@ -526,6 +526,35 @@ button:focus {
   transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease !important;
   height: 100% !important;
 }
+.project-card-view--tunedrop {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 12px 28px rgba(0, 191, 99, 0.22), 0 0 0 1px rgba(0, 191, 99, 0.25) !important;
+  border-color: rgba(0, 191, 99, 0.38) !important;
+  animation: tunedropGlow 6800ms ease-in-out infinite;
+}
+.project-card-view--tunedrop::before {
+  content: "";
+  position: absolute;
+  inset: -40% -60%;
+  background: conic-gradient(from 45deg, rgba(0, 191, 99, 0.3), rgba(20, 140, 255, 0.18), rgba(0, 191, 99, 0.3));
+  filter: blur(18px);
+  opacity: 0.8;
+  animation: tunedropAurora 14s linear infinite;
+  z-index: -2;
+}
+.project-card-view--tunedrop::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: rgba(8, 32, 39, 0.82);
+  z-index: -1;
+}
+.project-card-view--tunedrop:hover {
+  box-shadow: 0 18px 34px rgba(0, 191, 99, 0.3), 0 0 0 1px rgba(0, 191, 99, 0.35) !important;
+}
 .project-card-view .card-body {
   /* Improve text readability inside dark cards */
   color: rgba(255, 255, 255, 0.92) !important;
@@ -555,6 +584,30 @@ button:focus {
 .project-card-view:hover .card-img-top {
   transform: translateY(-2px) scale(1.02);
   opacity: 0.98;
+}
+
+@keyframes tunedropGlow {
+  0%,
+  100% {
+    filter: saturate(1);
+    transform: translateY(0);
+  }
+  45% {
+    filter: saturate(1.18);
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes tunedropAurora {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 /* Publications card styling */
@@ -593,6 +646,9 @@ button:focus {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 .pub-badge {
   display: inline-block;

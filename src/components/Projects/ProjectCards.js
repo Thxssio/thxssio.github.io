@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function ProjectCards(props) {
   const {
@@ -13,10 +14,15 @@ function ProjectCards(props) {
     ghLink,
     demoLink,
     isBlog,
+    cardClassName,
   } = props;
 
+  const isExternalDemoLink =
+    typeof demoLink === "string" &&
+    (/^(https?:)?\/\//i.test(demoLink) || demoLink.startsWith("mailto:"));
+
   return (
-    <Card className="project-card-view">
+    <Card className={`project-card-view${cardClassName ? ` ${cardClassName}` : ""}`}>
       {imgPath ? (
         <Card.Img variant="top" src={imgPath} alt="card-img" />
       ) : null}
@@ -37,8 +43,9 @@ function ProjectCards(props) {
         {!isBlog && demoLink && (
           <Button
             variant="primary"
-            href={demoLink}
-            target="_blank"
+            {...(isExternalDemoLink
+              ? { href: demoLink, target: "_blank", rel: "noreferrer" }
+              : { as: Link, to: demoLink })}
             style={{ marginLeft: ghLink ? "10px" : 0 }}
           >
             <CgWebsite /> &nbsp; Demo

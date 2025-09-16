@@ -12,6 +12,7 @@ import caranchoImg from "../../Assets/Projects/carancho.png";
 import fbotImg from "../../Assets/Projects/fbot.PNG";
 import hydroneImg from "../../Assets/Projects/hydrone.PNG";
 import taurabotsImg from "../../Assets/Projects/taurabots.PNG";
+import tunedropImg from "../../Assets/Projects/tunedrop.png";
 // Imagens dos projetos serão adicionadas depois; removidas por ora
 
 function Projects() {
@@ -154,6 +155,29 @@ function Projects() {
                 </>
               }
               imgPath={agropulseImg}
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="TuneDrop"
+              subtitle="Side project · 2023 – Present"
+              description={
+                <>
+                  <p>
+                    Conversor rápido de links do YouTube em downloads diretos
+                    de áudio, com preferências de tema e feedback instantâneo.
+                  </p>
+                  <ul>
+                    <li>Persistência de modo claro/escuro</li>
+                    <li>RapidAPI para obter links de áudio</li>
+                    <li>Notificações em tempo real com react-hot-toast</li>
+                  </ul>
+                </>
+              }
+              imgPath={tunedropImg}
+              demoLink="/tunedrop"
+              cardClassName="project-card-view--tunedrop"
             />
           </Col>
 
