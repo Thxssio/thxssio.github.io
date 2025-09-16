@@ -530,10 +530,10 @@ button:focus {
   /* Improve text readability inside dark cards */
   color: rgba(255, 255, 255, 0.92) !important;
 }
-/* Override Bootstrap's muted text color inside project cards (too dark on mobile) */
+/* Dim subtitle under project titles so the heading stays dominant */
 .project-card-view .card-subtitle,
 .project-card-view .text-muted {
-  color: rgba(255, 255, 255, 0.82) !important;
+  color: rgba(255, 255, 255, 0.62) !important;
 }
 @media (max-width: 767px) {
   .project-card-view .card-subtitle {
