@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+body {
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #00bf63;
+  background: linear-gradient(-45deg, #06181c, #082027, #0a2e37, #00bf63);
+  background-size: 400% 400%;
+  animation: homeGradient 18s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  .project-card.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
