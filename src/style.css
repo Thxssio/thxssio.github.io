@@ -526,6 +526,21 @@ button:focus {
   transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease !important;
   height: 100% !important;
 }
+.project-card-view .card-body {
+  /* Improve text readability inside dark cards */
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+/* Override Bootstrap's muted text color inside project cards (too dark on mobile) */
+.project-card-view .card-subtitle,
+.project-card-view .text-muted {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+@media (max-width: 767px) {
+  .project-card-view .card-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.25rem !important;
+  }
+}
 .project-card-view:hover {
   transform: translateY(-3px) scale(1.01) !important;
   overflow: hidden !important;
