@@ -16,6 +16,7 @@
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^4.0.0",
+    "react-helmet": "^6.1.0",
     "react-hot-toast": "^2.6.0",
     "react-icons": "^4.8.0",
     "react-parallax-tilt": "^1.7.42",
