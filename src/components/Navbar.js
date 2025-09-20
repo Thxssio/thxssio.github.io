@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import { FaBookOpen } from "react-icons/fa";
+import { RiQuillPenLine } from "react-icons/ri";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -89,6 +90,15 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <FaBookOpen style={{ marginBottom: "2px" }} /> Publications
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/stories"
+                onClick={() => updateExpanded(false)}
+              >
+                <RiQuillPenLine style={{ marginBottom: "2px" }} /> Stories
               </Nav.Link>
             </Nav.Item>
 

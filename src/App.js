@@ -8,12 +8,10 @@ import Publications from "./components/Publications/Publications";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import TuneDrop from "./components/TuneDrop/TuneDrop";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
+import Stories from "./components/Stories/Stories";
+import StoryDetail from "./components/Stories/StoryDetail";
+import NotFound from "./components/NotFound";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -42,9 +40,11 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/tunedrop" element={<TuneDrop />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/stories" element={<Stories />} />
+          <Route path="/stories/:slug" element={<StoryDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <SpeedInsights />
