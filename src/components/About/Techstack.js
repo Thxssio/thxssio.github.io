@@ -15,9 +15,9 @@ import {
   SiKicad,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
-import solidworksIcon from "../../Assets/icons/solidworks.png";
-import onshapeIcon from "../../Assets/icons/onshape.png";
-import easyedaIcon from "../../Assets/icons/easyeda.png";
+import solidworksIcon from "@/Assets/icons/solidworks.png";
+import onshapeIcon from "@/Assets/icons/onshape.png";
+import easyedaIcon from "@/Assets/icons/easyeda.png";
 
 function Techstack() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { SiUbuntu, SiWindows, SiMacos, SiVisualstudiocode, SiCanva, SiAdobepremierepro, SiAdobelightroom } from "react-icons/si";
-import capcutIcon from "../../Assets/icons/capcut.png";
+import capcutIcon from "@/Assets/icons/capcut.png";
 
 function Toolstack() {
   return (

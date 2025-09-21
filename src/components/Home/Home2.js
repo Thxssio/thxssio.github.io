@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Lottie from "lottie-react";
-import profileAnimation from "../../Assets/profile.json";
+import profileAnimation from "@/Assets/profile.json";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,

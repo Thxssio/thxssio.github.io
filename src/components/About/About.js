@@ -5,7 +5,7 @@ import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import Lottie from "lottie-react";
-import aboutAnimation from "../../Assets/about.json";
+import aboutAnimation from "@/Assets/about.json";
 import Toolstack from "./Toolstack";
 import { Helmet } from "react-helmet";
 

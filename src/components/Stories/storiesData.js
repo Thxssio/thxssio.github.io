@@ -1,7 +1,7 @@
-import navmsImg from "../../Assets/Projects/navms.PNG";
-import taurabotsImg from "../../Assets/Projects/taurabots.PNG";
-import agropulseImg from "../../Assets/Projects/agropulsehub.png";
-import tunedropImg from "../../Assets/Projects/tunedrop.png";
+import navmsImg from "@/Assets/Projects/navms.PNG";
+import taurabotsImg from "@/Assets/Projects/taurabots.PNG";
+import agropulseImg from "@/Assets/Projects/agropulsehub.png";
+import tunedropImg from "@/Assets/Projects/tunedrop.png";
 
 
 const stories = [

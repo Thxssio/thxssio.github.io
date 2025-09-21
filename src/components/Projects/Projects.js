@@ -3,16 +3,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 // Imagens adicionadas
-import navmsImg from "../../Assets/Projects/navms.PNG";
-import digitalTwinImg from "../../Assets/Projects/digitaltwin.PNG";
-import agropulseImg from "../../Assets/Projects/agropulsehub.png";
-import capacitacaoImg from "../../Assets/Projects/capacitacao4.0.jpeg";
-import gsecImg from "../../Assets/Projects/gsec.PNG";
-import caranchoImg from "../../Assets/Projects/carancho.png";
-import fbotImg from "../../Assets/Projects/fbot.PNG";
-import hydroneImg from "../../Assets/Projects/hydrone.PNG";
-import taurabotsImg from "../../Assets/Projects/taurabots.PNG";
-import tunedropImg from "../../Assets/Projects/tunedrop.png";
+import navmsImg from "@/Assets/Projects/navms.PNG";
+import digitalTwinImg from "@/Assets/Projects/digitaltwin.PNG";
+import agropulseImg from "@/Assets/Projects/agropulsehub.png";
+import capacitacaoImg from "@/Assets/Projects/capacitacao4.0.jpeg";
+import gsecImg from "@/Assets/Projects/gsec.PNG";
+import caranchoImg from "@/Assets/Projects/carancho.png";
+import fbotImg from "@/Assets/Projects/fbot.PNG";
+import hydroneImg from "@/Assets/Projects/hydrone.PNG";
+import taurabotsImg from "@/Assets/Projects/taurabots.PNG";
+import tunedropImg from "@/Assets/Projects/tunedrop.png";
 import { Helmet } from "react-helmet";
 // Imagens dos projetos serão adicionadas depois; removidas por ora
 

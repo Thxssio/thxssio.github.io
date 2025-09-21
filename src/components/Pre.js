@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-import loadingAnimation from "../Assets/loading.json";
+import loadingAnimation from "@/Assets/loading.json";
 
 function Pre(props) {
   return (

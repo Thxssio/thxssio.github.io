@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Lottie from "lottie-react";
 import Particle from "./Particle";
-import emptyAnimation from "../Assets/empty.json";
+import emptyAnimation from "@/Assets/empty.json";
 
 function NotFound() {
   return (
