@@ -111,6 +111,13 @@ button:focus {
   font-size: 1.2rem !important;
 }
 
+.nav-user-label {
+  color: rgba(255, 255, 255, 0.78) !important;
+  cursor: default !important;
+  pointer-events: none !important;
+  font-weight: 500 !important;
+}
+
 .navbar-toggler {
   position: relative !important;
   background-color: transparent !important;
@@ -916,6 +923,20 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.logout-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: rgba(8, 32, 39, 0.85) !important;
+  border-color: rgba(8, 32, 39, 0.85) !important;
+  font-weight: 600 !important;
+}
+
+.logout-btn:hover {
+  background-color: rgba(0, 191, 99, 0.85) !important;
+  border-color: rgba(0, 191, 99, 0.85) !important;
 }
 
 /* --------- */
