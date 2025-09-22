@@ -12,6 +12,8 @@ import caranchoImg from "../../Assets/Projects/carancho.png";
 import fbotImg from "../../Assets/Projects/fbot.PNG";
 import hydroneImg from "../../Assets/Projects/hydrone.PNG";
 import taurabotsImg from "../../Assets/Projects/taurabots.PNG";
+import tunedropImg from "../../Assets/Projects/tunedrop.png";
+import { Helmet } from "react-helmet";
 // Imagens dos projetos serão adicionadas depois; removidas por ora
 
 function Projects() {
@@ -41,19 +43,27 @@ function Projects() {
   }, []);
 
   return (
-    <Container fluid className="project-section">
-      <Particle />
-      <Container>
-        <h1 className="project-heading">
-          Projects & <strong className="purple">Experiences</strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          A selection of recent projects and experiences.
-        </p>
-        <Row ref={gridRef} style={{ justifyContent: "center", paddingBottom: "10px" }}>
+    <>
+      <Helmet>
+        <title>Thássio Silva | Projects & Experiences</title>
+        <meta
+          name="description"
+          content="Portfolio of robotics, machine learning, and software projects ranging from autonomous UAV navigation to SaaS platforms."
+        />
+      </Helmet>
+      <Container fluid className="project-section">
+        <Particle />
+        <Container>
+          <h1 className="project-heading">
+            Projects & <strong className="purple">Experiences</strong>
+          </h1>
+          <p style={{ color: "white" }}>
+            A selection of recent projects and experiences.
+          </p>
+          <Row ref={gridRef} style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Programa Capacitação 4.0"
+              title="Capacitacao 4.0 Program"
               subtitle="EMBRAPII · Part-time · Santa Maria/RS · On-site · Sep 2025 – Present"
               description={
                 <>
@@ -99,7 +109,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Carancho Aerodesign — Projetista eletrônico"
+              title="Carancho Aerodesign — Electronics Designer"
               subtitle={
                 "Aug 2023 – Present · On-site | Trainee (Aug 2023 – Dec 2023) → Electronics Designer (Jan 2024 – Present)"
               }
@@ -121,7 +131,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              title="TauraBOTS — Pesquisador"
+              title="TauraBOTS — Researcher"
               subtitle="Part-time · Jun 2023 – Present · Hybrid"
               description={
                 <>
@@ -154,6 +164,30 @@ function Projects() {
                 </>
               }
               imgPath={agropulseImg}
+              demoLink="https://agropulsehub.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="TuneDrop"
+              subtitle="Side project · 2023 – Present"
+              description={
+                <>
+                  <p>
+                    Fast converter turning YouTube links into direct audio
+                    downloads, with theme preferences and instant feedback.
+                  </p>
+                  <ul>
+                    <li>Dark/light mode preference persistence</li>
+                    <li>RapidAPI integration for audio links</li>
+                    <li>Real-time toasts with react-hot-toast</li>
+                  </ul>
+                </>
+              }
+              imgPath={tunedropImg}
+              demoLink="/tunedrop"
+              cardClassName="project-card-view--tunedrop"
             />
           </Col>
 
@@ -180,7 +214,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              title="FBOT — Pesquisador"
+              title="FBOT — Researcher"
               subtitle="Part-time · Sep 2021 – Sep 2023 · Rio Grande/RS"
               description={
                 <>
@@ -197,7 +231,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              title="Hydrone — P&D"
+              title="Hydrone — R&D"
               subtitle="Part-time · Apr 2021 – Apr 2023 · On-site"
               description={
                 <>
@@ -233,9 +267,10 @@ function Projects() {
               imgPath={digitalTwinImg}
             />
           </Col>
-        </Row>
+          </Row>
+        </Container>
       </Container>
-    </Container>
+    </>
   );
 }
 

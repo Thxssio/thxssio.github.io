@@ -7,53 +7,63 @@ import Aboutcard from "./AboutCard";
 import Lottie from "lottie-react";
 import aboutAnimation from "../../Assets/about.json";
 import Toolstack from "./Toolstack";
+import { Helmet } from "react-helmet";
 
 function About() {
   return (
-    <Container fluid className="about-section">
-      <Particle />
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
-            </h1>
-            <Aboutcard />
-          </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <Lottie
-              animationData={aboutAnimation}
-              loop={true}
-              className="img-fluid"
-              style={{ maxHeight: "350px" }}
-            />
-          </Col>
-        </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
+    <>
+      <Helmet>
+        <title>Thássio Silva | About</title>
+        <meta
+          name="description"
+          content="Learn about Thássio Silva's background in robotics, AI, software engineering, and research leadership."
+        />
+      </Helmet>
+      <Container fluid className="about-section">
+        <Particle />
+        <Container>
+          <Row style={{ justifyContent: "center", padding: "10px" }}>
+            <Col
+              md={7}
+              style={{
+                justifyContent: "center",
+                paddingTop: "30px",
+                paddingBottom: "50px",
+              }}
+            >
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+                Know Who <strong className="purple">I'M</strong>
+              </h1>
+              <Aboutcard />
+            </Col>
+            <Col
+              md={5}
+              style={{ paddingTop: "120px", paddingBottom: "50px" }}
+              className="about-img"
+            >
+              <Lottie
+                animationData={aboutAnimation}
+                loop={true}
+                className="img-fluid"
+                style={{ maxHeight: "350px" }}
+              />
+            </Col>
+          </Row>
+          <h1 className="project-heading">
+            Professional <strong className="purple">Skillset </strong>
+          </h1>
 
-        <Techstack />
+          <Techstack />
 
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1>
-        <Toolstack />
+          <h1 className="project-heading">
+            <strong className="purple">Tools</strong> I use
+          </h1>
+          <Toolstack />
 
-        <Github />
+          <Github />
+        </Container>
       </Container>
-    </Container>
+    </>
   );
 }
 
