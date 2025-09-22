@@ -147,6 +147,13 @@
 .login-header {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.login-header-text {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
@@ -160,6 +167,25 @@
   margin: 0;
   font-size: 0.98rem;
   color: rgba(255, 255, 255, 0.72);
+}
+
+.login-portal-link {
+  font-weight: 600;
+  border-radius: 999px;
+  padding-inline: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.login-portal-link:hover {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 576px) {
+  .login-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .login-feedback {

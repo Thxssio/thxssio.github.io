@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Alert, Button, Container, Form, Spinner } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import Particle from "../Particle";
 import { useAuth } from "../../context/AuthContext";
@@ -15,6 +16,7 @@ const INITIAL_STATE = {
 
 function Login() {
   const { login, status, isAuthenticated, user, initializing } = useAuth();
+  const navigate = useNavigate();
   const [form, setForm] = useState(INITIAL_STATE);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
@@ -67,6 +69,19 @@ function Login() {
 
   const alreadyLogged = !initializing && isAuthenticated;
 
+  useEffect(() => {
+    if (!alreadyLogged) {
+      return undefined;
+    }
+
+    const delay = success ? 2800 : 600;
+    const timeout = setTimeout(() => {
+      navigate("/portal", { replace: true });
+    }, delay);
+
+    return () => clearTimeout(timeout);
+  }, [alreadyLogged, success, navigate]);
+
   return (
     <section className="login-page">
       <Particle />
@@ -100,10 +115,23 @@ function Login() {
 
           <div className="login-form-wrapper">
             <header className="login-header">
-              <h1 className="login-title">Portal</h1>
-              <p className="login-subtitle">
-                Acesse com suas credenciais corporativas para continuar.
-              </p>
+              <div className="login-header-text">
+                <h1 className="login-title">Portal</h1>
+                <p className="login-subtitle">
+                  Acesse com suas credenciais corporativas para continuar.
+                </p>
+              </div>
+              {alreadyLogged && (
+                <Button
+                  as={Link}
+                  to="/portal"
+                  variant="outline-success"
+                  size="sm"
+                  className="login-portal-link"
+                >
+                  Ir para o painel
+                </Button>
+              )}
             </header>
 
             {initializing && (

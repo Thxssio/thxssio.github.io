@@ -112,10 +112,17 @@ button:focus {
 }
 
 .nav-user-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
   color: rgba(255, 255, 255, 0.78) !important;
   cursor: default !important;
   pointer-events: none !important;
   font-weight: 500 !important;
+  font-size: 0.85rem !important;
+  padding: 0.45rem 0.75rem !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
 }
 
 .navbar-toggler {
@@ -219,6 +226,167 @@ button:focus {
 .navbar-nav .nav-item {
   position: relative;
   margin-left: 20px;
+}
+
+.nav-account {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-account-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(8, 32, 39, 0.6);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nav-account-trigger:hover,
+.nav-account-trigger:focus {
+  background: rgba(0, 191, 99, 0.22);
+  border-color: rgba(0, 191, 99, 0.45);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(0, 191, 99, 0.24);
+}
+
+.nav-account-trigger.is-open {
+  background: rgba(0, 191, 99, 0.26);
+  border-color: rgba(0, 191, 99, 0.55);
+  color: #ffffff;
+}
+
+.nav-account-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 191, 99, 0.22);
+  color: var(--imp-text-color);
+  font-size: 1.05rem;
+}
+
+.nav-account-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1;
+  align-items: flex-start;
+}
+
+.nav-account-text small {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.nav-account-text strong {
+  font-size: 0.86rem;
+  color: #ffffff;
+}
+
+.nav-account-caret {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-account-trigger.is-open .nav-account-caret {
+  transform: rotate(-180deg);
+}
+
+.nav-account-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 220px;
+  padding: 0.85rem;
+  background: rgba(2, 12, 16, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px) scale(0.97);
+  transition: opacity 0.22s ease, transform 0.26s ease;
+  z-index: 25;
+}
+
+.nav-account-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.nav-account-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.86) !important;
+  border: 0;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  transition: background 0.18s ease, color 0.18s ease;
+  cursor: pointer;
+}
+
+.nav-account-item svg {
+  font-size: 1rem;
+}
+
+.nav-account-item:hover,
+.nav-account-item:focus {
+  background: rgba(0, 191, 99, 0.22);
+  color: #ffffff !important;
+}
+
+.nav-account-item:focus {
+  outline: none;
+}
+
+.nav-account-item[type="button"] {
+  background: none;
+  color: inherit;
+}
+
+@media (max-width: 991px) {
+  .nav-account {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-account-trigger {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-account-menu {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    margin-top: 0.75rem;
+    transform: translateY(-6px);
+    box-shadow: none;
+  }
 }
 
 .navbar-nav .nav-item a {
@@ -973,7 +1141,9 @@ button:focus {
 
 .fork-btn {
   font-size: 1.1em !important;
-  padding-top: 10px !important;
+  padding-top: 0 !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .fork-btn-inner {
@@ -998,13 +1168,17 @@ button:focus {
 .logout-btn {
   display: inline-flex !important;
   align-items: center;
-  gap: 0.45rem;
-  background-color: rgba(8, 32, 39, 0.85) !important;
-  border-color: rgba(8, 32, 39, 0.85) !important;
+  gap: 0.35rem;
+  background-color: rgba(8, 32, 39, 0.7) !important;
+  border-color: rgba(8, 32, 39, 0.7) !important;
   font-weight: 600 !important;
+  line-height: 1.2 !important;
+  padding: 0.45rem 1rem !important;
+  border-radius: 12px !important;
 }
 
-.logout-btn:hover {
+.logout-btn:hover,
+.logout-btn:focus {
   background-color: rgba(0, 191, 99, 0.85) !important;
   border-color: rgba(0, 191, 99, 0.85) !important;
 }
